@@ -1,0 +1,28 @@
+{
+    "id": "powershell-ext",
+    "version": "0.1.0",
+    "name": "PowerShell-Ext",
+    "documentationURL": "https://github.com/rarnken/features/tree/main/src/powershell-ext",
+    "description": "Installs PowerShell along with needed dependencies. Useful for base Dockerfiles that often are missing required install dependencies like gpg.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none",
+                "7.1",
+                "7.3"
+            ],
+            "default": "latest",
+            "description": "Select or enter a version of PowerShell."
+        },
+        "modules": {
+            "type": "string",
+            "default": "",
+            "description": "Optional comma separated list of PowerShell modules (optional including specific version) to install."
+          }
+        },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
