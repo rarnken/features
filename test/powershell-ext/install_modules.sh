@@ -10,7 +10,9 @@ source dev-container-features-test-lib
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "execute command" bash -c "powershell-ext"
+check "az.resources" pwsh -Command "(Get-Module -ListAvailable -Name Az.Resources).Version.ToString()"
+check "az.storage" pwsh -Command "(Get-Module -ListAvailable -Name Az.Storage).Version.ToString()"
+check "az.kusto" pwsh -Command "(Get-Module -ListAvailable -Name Az.Kusto).Version.ToString()"
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
