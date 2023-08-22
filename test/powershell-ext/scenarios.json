@@ -1,0 +1,10 @@
+{
+    "install_modules_latest_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:jammy",
+        "features": {
+            "powershell-ext": {
+                "modules": "az.resources,az.storage,az.kusto:2.2.0"
+            }
+        }
+    }
+}
